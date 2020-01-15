@@ -1,6 +1,7 @@
 package sample;
 
 import com.jcraft.jsch.*;
+import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 
 import java.io.*;
@@ -28,11 +29,19 @@ public class JSshConnection extends Thread {
     private Channel channel = null;
     private ChannelSftp channelSftp = null;
     private ArrayList<String> pliki = null;
+    private boolean filesDownloaded = false;
+
+    Label progressPercentage = null;
 
     public ArrayList<String> getPliki() {
         return pliki;
     }
 
+
+    public boolean getFilesDownloadedStatus()
+    {
+        return filesDownloaded;
+    }
     @Override
     public void run() {
         for (int i = 0; i < pliki.size(); i ++)
@@ -75,7 +84,7 @@ public class JSshConnection extends Thread {
                 e.printStackTrace();
             }
         }
-
+    filesDownloaded = true;
     }
 
     public JSshConnection(String h, String u, String pa, String po,ProgressBar b) {
@@ -84,6 +93,7 @@ public class JSshConnection extends Thread {
         this.password = pa;
         this.port = po;
         bar = b;
+       // progressPercentage = pr;
         //start();
     }
 

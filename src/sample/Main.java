@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -30,10 +31,16 @@ public class Main extends Application {
     boolean filesDownloaded = false;
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        Text scenetitle = new Text("SSH Lazy Loader");
-        scenetitle.setFont(Font.font("Tahoma"));
+        //Parent root = FXMLLoader.load(getClass().getResource("interface.fxml"));
+        //primaryStage.setTitle("Hello World");
+        //Text scenetitle = new Text("SSH Lazy Loader");
+        //scenetitle.setFont(Font.font("Tahoma"));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("interface.fxml"));
+        primaryStage.setScene(new Scene((Parent) loader.load()));
+        interfaceController controller = loader.getController();
+
+        /*
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
         grid.setHgap(10);
@@ -93,9 +100,11 @@ public class Main extends Application {
 
             }
             });
-        Scene scene = new Scene(grid, 500, 375);
 
-        primaryStage.setScene(scene);
+         */
+       // Scene scene = new Scene(grid, 500, 375);
+
+       // primaryStage.setScene(scene);
 
         primaryStage.show();
     }
@@ -105,72 +114,8 @@ public class Main extends Application {
         launch(args);
     }
 
-
-
-    public void createFolder() throws IOException {
-        File file = new File("DownloadedFiles");
-        boolean bool = file.mkdir();
-        if (bool)
-            System.out.println("Stworzono folder");
-        else
-            System.out.println("Nie udalo sie stworzyc lub folder juz istnieje");
-        if (!file.exists())
-            return;
-    }
-
-    public String getPathdirectory() throws IOException {
-
-        String path = new File(".").getCanonicalPath();
-        System.out.println(path + "/");
-        return path + "/";
-    }
-
-    public String getDownloadFilesDirectory() throws IOException {
-        return getPathdirectory() + "DownloadedFiles/";
-    }
-
-    public void setUpStuff() throws IOException {
-        MainSettings.setUser("radek");
-        MainSettings.setPassword("radek2");
-        MainSettings.setLocalPath(getDownloadFilesDirectory());
-        MainSettings.setRemotePath("/home/radek/Wideo/");
-    }
-    public void processFiles()
-    {
-        listaPlikow = new ArrayList<>();
-        System.out.println("Hello World!");
-
-        try {
-            createFolder();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
-        js = new JSshConnection(ipTextField.getText(), MainSettings.getUser(), MainSettings.getPassword(), portTextField.getText(), bar);
-        js.connect();
-        String pathToFiles = MainSettings.getLocalPath();
-        String remotePath = MainSettings.getRemotePath();
-
-        js.sendCommand("find " + remotePath + " -maxdepth 1 -type f -printf \"%f\\n\"");
-        js.getListOfFiles(remotePath);
-
-        try {
-            js.downloadFile(getDownloadFilesDirectory(), remotePath);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        js.start();
-        filesDownloaded = true;
-    }
     public void readFiles() throws IOException {
-        if (filesDownloaded) {
-            List<Keymap> list = new ArrayList<>();
-            for (int i = 0; i < js.getPliki().size(); i++) {
-                Parser p = new Parser();
-                p.getListOfKeyValuePairs(MainSettings.getLocalPath(), js.getPliki().get(i));
-            }
-        }
+
     }
 
 };

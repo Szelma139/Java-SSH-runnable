@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/sample/DirectoryHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/FileStructure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Keymap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/interface.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/interfaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SSH2/sample/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SSH2/sample/JSshConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SSH2/sample/JSshConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SSH2/sample/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SSH2/sample/Main$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SSH2/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SSH2/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SSH2/sample/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SSH2/sample/Parser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SSH2/sample/progressMonitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SSH2/sample/progressMonitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/JSshConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/JSshConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/progressMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/progressMonitor.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,6 +74,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -63,8 +84,14 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectId" id="1WNcU7lZumzD4fRbDlbJSkNKH9Q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -207,26 +234,30 @@
       <screen x="40" y="0" width="1560" height="846" />
     </state>
     <state x="628" y="134" width="374" height="570" key="#com.intellij.ide.util.MemberChooser/40.0.1560.846@40.0.1560.846" timestamp="1578994543466" />
+    <state x="553" y="172" width="524" height="495" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579070786768">
+      <screen x="40" y="0" width="1560" height="846" />
+    </state>
+    <state x="553" y="172" width="524" height="495" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/40.0.1560.846@40.0.1560.846" timestamp="1579070786768" />
     <state x="598" y="178" width="424" height="479" key="FileChooserDialogImpl" timestamp="1578996658382">
       <screen x="40" y="0" width="1560" height="846" />
     </state>
     <state x="598" y="178" width="424" height="479" key="FileChooserDialogImpl/40.0.1560.846@40.0.1560.846" timestamp="1578996658382" />
-    <state width="1518" height="212" key="GridCell.Tab.0.bottom" timestamp="1579008313756">
+    <state width="1518" height="180" key="GridCell.Tab.0.bottom" timestamp="1579077888736">
       <screen x="40" y="0" width="1560" height="846" />
     </state>
-    <state width="1518" height="212" key="GridCell.Tab.0.bottom/40.0.1560.846@40.0.1560.846" timestamp="1579008313756" />
-    <state width="1518" height="212" key="GridCell.Tab.0.center" timestamp="1579008313755">
+    <state width="1518" height="180" key="GridCell.Tab.0.bottom/40.0.1560.846@40.0.1560.846" timestamp="1579077888736" />
+    <state width="1518" height="180" key="GridCell.Tab.0.center" timestamp="1579077888735">
       <screen x="40" y="0" width="1560" height="846" />
     </state>
-    <state width="1518" height="212" key="GridCell.Tab.0.center/40.0.1560.846@40.0.1560.846" timestamp="1579008313755" />
-    <state width="1518" height="212" key="GridCell.Tab.0.left" timestamp="1579008313754">
+    <state width="1518" height="180" key="GridCell.Tab.0.center/40.0.1560.846@40.0.1560.846" timestamp="1579077888735" />
+    <state width="1518" height="180" key="GridCell.Tab.0.left" timestamp="1579077888734">
       <screen x="40" y="0" width="1560" height="846" />
     </state>
-    <state width="1518" height="212" key="GridCell.Tab.0.left/40.0.1560.846@40.0.1560.846" timestamp="1579008313754" />
-    <state width="1518" height="212" key="GridCell.Tab.0.right" timestamp="1579008313755">
+    <state width="1518" height="180" key="GridCell.Tab.0.left/40.0.1560.846@40.0.1560.846" timestamp="1579077888734" />
+    <state width="1518" height="180" key="GridCell.Tab.0.right" timestamp="1579077888735">
       <screen x="40" y="0" width="1560" height="846" />
     </state>
-    <state width="1518" height="212" key="GridCell.Tab.0.right/40.0.1560.846@40.0.1560.846" timestamp="1579008313755" />
+    <state width="1518" height="180" key="GridCell.Tab.0.right/40.0.1560.846@40.0.1560.846" timestamp="1579077888735" />
     <state x="303" y="0" width="1024" height="840" key="SettingsEditor" timestamp="1578996659667">
       <screen x="40" y="0" width="1560" height="846" />
     </state>

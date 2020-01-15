@@ -1,6 +1,7 @@
 package sample;
 
 import com.jcraft.jsch.SftpProgressMonitor;
+import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import org.apache.cordova.api.CallbackContext;
 
@@ -11,11 +12,14 @@ public class progressMonitor implements SftpProgressMonitor{
     private long percent            = 0;
     private CallbackContext callbacks = null;
     ProgressBar bar = null;
+    Label progressPercentage = null;
 
     // If you need send something to the constructor, change this method
-    public progressMonitor(ProgressBar b) {
+    public progressMonitor(ProgressBar b ) {
         bar = b;
         bar.setProgress(0);
+       // progressPercentage.setText("0");
+        //progressPercentage = pr;
     }
 
     public void init(int op, java.lang.String src, java.lang.String dest, long max) {
@@ -36,6 +40,7 @@ public class progressMonitor implements SftpProgressMonitor{
             this.percent = percentNow;
             double myPercent = (double)this.percent;
             bar.setProgress(myPercent/100);
+          //  progressPercentage.setText(Double.toString(myPercent) + "%");
             System.out.println("perc " + myPercent/100);
             //bar.setProgress(this.percent/100);
             //System.out.println("progress",this.percent); // Progress 0,0
